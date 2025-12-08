@@ -1,0 +1,47 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 快捷方式
+*.lnk
+
+# 临时文件
+*.tmp
+*.bak
+*.log
+
+# OS 特定文件
+.AppleDouble
+.LSOverride
+$RECYCLE.BIN/
+
+# Node.js (如果使用)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Python (如果使用)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# 环境文件
+.env
+.env.local
+
+# 其他
+*.zip
+*.rar
