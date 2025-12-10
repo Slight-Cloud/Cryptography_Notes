@@ -66,7 +66,7 @@ $$
 
 其中：IP（初始置换）$\to$ $f_{K1}$（第一轮）$\to$ **SW（显式交换函数）** $\to$ $f_{K2}$（第二轮）$\to$ $IP^{-1}$（逆置换）
 
-> ⭐ **SW 的字段地位**：不是每一轮迭代后额外交换一次，而是 S-DES 标准中定义的Feistel结构中的切换函数 (Switch Function)，只是明确定义了，供教学使用。
+> **SW 的说明**：这不是进行额外交换，而是在S-DES 中，对标准的Fesitel操作的“所谓""SW操作进行显式说明，供教学使用。实际上合起来就是标准操作。
 
 ### 2.0.1  **S-DES 整体密钥生成流程图**:
 
@@ -119,18 +119,18 @@ graph TD
     %% --- 2. 轮函数 f(R0, K1) 内部细节 ---
     subgraph F_Function [轮函数 f 之内部流程]
         direction TB
-    
+  
         %% Step A: E/P 扩展 (4位 -> 8位)
         R0 -.->|复制输入| EP["E/P 扩展<br/>(4 bit -> 8 bit)"]:::func
-    
+  
         %% Step B: 与子密钥异或
         EP --> XOR_K{XOR}:::func
         K1[子密钥 K1<br/>8-bit]:::key -.-> XOR_K
-    
+  
         %% Step C: S盒代换 (8位拆分 -> S0/S1 -> 4位)
         XOR_K -->|左4位| S0["S0盒<br/>(4进2出)"]:::sbox
         XOR_K -->|右4位| S1["S1盒<br/>(4进2出)"]:::sbox
-    
+  
         %% Step D: P4 置换 (合并 -> 4位)
         S0 -->|2 bit| Merge((+)):::plain
         S1 -->|2 bit| Merge
