@@ -39,7 +39,7 @@ IPSec 提供四项核心安全服务（设发送方 $A$、接收方 $B$、消息
 * **公式**：$C = E_{K_{enc}}(M)$
   * $C$：密文，$E$：加密算法，$K_{enc}$：协商的密钥
 
-**1.3.2 数据完整性 (Data Integrity)&认证(Data Origin Authentication)**
+**1.3.2 数据完整性 (Data Integrity) & 认证(Data Origin Authentication)**
 
 这就是下文的“鉴别”
 
